@@ -21,26 +21,26 @@ Include: yum
       vte291-devel \
       vte-profile \
       devtoolset-7-gcc*
-    scl enable devtoolset-7 bash
+#    scl enable devtoolset-7 bash
     yum -y groups install "Development Tools"
     yum -y groups install "Base"
     yum -y install git cmake gcc-c++ gcc binutils \
-	    libX11-devel libXpm-devel libXft-devel libXext-devel
+	libX11-devel libXpm-devel libXft-devel libXext-devel
     yum -y install gcc-gfortran openssl-devel pcre-devel \
-	    mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
-	    fftw-devel cfitsio-devel graphviz-devel \
-	    avahi-compat-libdns_sd-devel libldap-dev python-devel python36-devel \
-	    libxml2-devel gsl-devel \
-      openmpi-devel \
-      cmake3 \
-      hdf5-devel \
-      patch \
-      qt5-qtbase-devel \
-      qt5-qtsvg-devel \
-      g++ numpy eigen3-devel zlib-devel libqt4-devel libtiff-devel \
-      bzip2 ca-certificates \
+	mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
+	fftw-devel cfitsio-devel graphviz-devel \
+	avahi-compat-libdns_sd-devel libldap-dev python-devel python36-devel \
+	libxml2-devel gsl-devel \
+      	openmpi-devel \
+      	cmake3 \
+      	hdf5-devel \
+      	patch \
+      	qt5-qtbase-devel \
+      	qt5-qtsvg-devel \
+      	g++ numpy eigen3-devel zlib-devel libqt4-devel libtiff-devel \
+      	bzip2 ca-certificates \
     	libglib2.0-0 libxext6 libsm6 libxrender1 \
-   	  mercurial subversion
+   	mercurial subversion
     yum -y update
    
     mkdir -p /storage/home
