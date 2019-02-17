@@ -25,8 +25,8 @@ Include: yum
     yum -y groups install "Development Tools"
     yum -y groups install "Base"
     yum -y install git cmake gcc-c++ gcc binutils \
-	libX11-devel libXpm-devel libXft-devel libXext-devel
-    yum -y install gcc-gfortran openssl-devel pcre-devel \
+	libX11-devel libXpm-devel libXft-devel libXext-devel \
+	gcc-gfortran openssl-devel pcre-devel \
 	mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
 	fftw-devel cfitsio-devel graphviz-devel \
 	avahi-compat-libdns_sd-devel libldap-dev python-devel python36-devel \
@@ -40,7 +40,10 @@ Include: yum
       	g++ numpy eigen3-devel zlib-devel libqt4-devel libtiff-devel \
       	bzip2 ca-certificates \
     	libglib2.0-0 libxext6 libsm6 libxrender1 \
-   	mercurial subversion
+   	mercurial subversion \
+	mesa-libGLU-devel.i686 \
+        mesa-libGL-devel.i686 \
+        libcanberra-gtk*
     yum -y update
    
     mkdir -p /storage/home
