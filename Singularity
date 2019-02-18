@@ -49,3 +49,4 @@ Include: yum
     mkdir -p /storage/work
     mkdir -p /gpfs/scratch
     mkdir -p /gpfs/group
+    mkdir -p /var/spool/torque
