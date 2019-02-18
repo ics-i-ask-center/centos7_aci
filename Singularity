@@ -7,6 +7,7 @@ Include: yum
 %files
 
 %environment
+source scl_source enable devtoolset-8
 
 %runscript
 
@@ -20,8 +21,7 @@ Include: yum
       vte-devel \
       vte291-devel \
       vte-profile \
-      devtoolset-7-gcc*
-#    scl enable devtoolset-7 bash
+      devtoolset-8-gcc*
     yum -y groups install "Development Tools"
     yum -y groups install "Base"
     yum -y install git cmake gcc-c++ gcc binutils \
