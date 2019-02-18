@@ -20,8 +20,8 @@ Include: yum
       centos-release-scl \
       vte-devel \
       vte291-devel \
-      vte-profile \
-      devtoolset-8-gcc*
+      vte-profile
+    yum -y install devtoolset-8-gcc*
     yum -y groups install "Development Tools"
     yum -y groups install "Base"
     yum -y install git cmake gcc-c++ gcc binutils \
