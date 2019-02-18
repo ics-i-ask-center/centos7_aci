@@ -16,8 +16,8 @@ Include: yum
     yum update -y
     yum install -y epel-release \
       terminator \
-      centos-release-scl \
-      vte-devel \
+      centos-release-scl
+    yum install -y vte-devel \
       vte291-devel \
       vte-profile \
       devtoolset-8-gcc*
