@@ -7,7 +7,6 @@ Include: yum
 %files
 
 %environment
-    source /opt/rh/devtoolset-7/enable
 
 %runscript
 
