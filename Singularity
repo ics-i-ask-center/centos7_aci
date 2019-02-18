@@ -7,7 +7,7 @@ Include: yum
 %files
 
 %environment
-    source scl_source enable devtoolset-8
+    source /opt/rh/devtoolset-8/enable
 
 %runscript
 
