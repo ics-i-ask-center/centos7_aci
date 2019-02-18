@@ -20,7 +20,7 @@ Include: yum
       vte-devel \
       vte291-devel \
       vte-profile \
-      devtoolset-7-gcc*
+      devtoolset-8-gcc*
     yum -y groups install "Development Tools"
     yum -y groups install "Base"
     yum -y install git cmake gcc-c++ gcc binutils \
