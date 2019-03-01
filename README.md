@@ -10,3 +10,6 @@ To enable GCC 8.2.1,
 ```
 > source /opt/rh/devtoolset-8/enable
 ```
+
+2019/3/1  
+OpenMPI is added to **$PATH**
