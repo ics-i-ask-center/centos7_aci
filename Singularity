@@ -45,7 +45,9 @@ export PATH
       mesa-libGLU-devel.i686 \
       mesa-libGL-devel.i686 \
       libcanberra-gtk* \
-      boost-devel
+      boost-devel \
+      autoconf 
+      
     yum -y update
    
     mkdir -p /storage/home
