@@ -12,4 +12,4 @@ To enable GCC 8.2.1,
 ```
 
 2019/3/1  
-OpenMPI is added to **$PATH**
+OpenMPI is added to `$PATH`
