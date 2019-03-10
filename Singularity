@@ -48,7 +48,8 @@ export LD_LIBRARY_PATH
       mesa-libGL-devel.i686 \
       libcanberra-gtk* \
       boost-devel \
-      autoconf 
+      autoconf \
+      Lmod
       
     yum -y update
    
@@ -65,3 +66,5 @@ export LD_LIBRARY_PATH
     ln -s `which vim` /usr/local/bin/vi
     
     ldconfig -n /usr/lib64/openmpi/lib/
+    
+    echo "module load mpi" >> /.singularity.d/env/01-base.sh
