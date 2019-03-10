@@ -63,3 +63,5 @@ export LD_LIBRARY_PATH
     ln -s `which moc-qt5` /usr/local/bin/moc
     ln -s `which rcc-qt5` /usr/local/bin/rcc
     ln -s `which vim` /usr/local/bin/vi
+    
+    ldconfig -n /usr/lib64/openmpi/lib/
