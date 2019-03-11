@@ -9,8 +9,10 @@ Include: yum
 %environment
 PATH="$PATH:/usr/lib64/openmpi/bin/"
 LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib/"
+MPI_ROOT=/usr/lib64/openmpi/
 export PATH
 export LD_LIBRARY_PATH
+export MPI_ROOT
 
 %runscript
 
@@ -67,4 +69,3 @@ export LD_LIBRARY_PATH
     
     ldconfig -n /usr/lib64/openmpi/lib/
     
-    echo "module load mpi" >> /.singularity.d/env/01-base.sh
