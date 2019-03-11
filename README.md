@@ -13,3 +13,6 @@ To enable GCC 8.2.1,
 
 2019/3/1  
 OpenMPI is added to `$PATH`
+
+2019/3/11  
+OpenMPI is updated to version 2.1.6  
