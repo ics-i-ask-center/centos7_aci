@@ -36,7 +36,6 @@ export MPI_ROOT
       fftw-devel cfitsio-devel graphviz-devel \
       avahi-compat-libdns_sd-devel libldap-dev python-devel python36-devel \
       libxml2-devel gsl-devel \
-      openmpi-devel \
       cmake3 \
       hdf5-devel \
       patch \
