@@ -68,7 +68,7 @@ export MPI_ROOT
     
     ldconfig -n /usr/lib64/openmpi/lib/
     
-    # Install OpenMP 2.1.6
+    # Install OpenMPI 2.1.6
     cd /tmp/
     wget https://download.open-mpi.org/release/open-mpi/v2.1/openmpi-2.1.6.tar.gz
     tar -xf openmpi-2.1.6.tar.gz
