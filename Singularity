@@ -48,7 +48,6 @@ export MPI_ROOT
       mesa-libGLU-devel.i686 \
       mesa-libGL-devel.i686 \
       libcanberra-gtk* \
-      boost-devel \
       autoconf \
       Lmod
       
@@ -79,4 +78,15 @@ export MPI_ROOT
     make install
     cd ..
     rm -rf openmpi-2.1.6*
+    
+    # Install Boost 1.70.0
+    cd /tmp/
+    wget https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.gz
+    tar -xf boost_1_70_0.tar.gz
+    cd boost_1_70_0
+    ./bootstrap.sh
+    ./b2 install
+    cd ..
+    rm -rf boost_1_70_0*
+    
     
