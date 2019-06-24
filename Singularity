@@ -84,7 +84,7 @@ export MPI_ROOT
     wget https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.gz
     tar -xf boost_1_70_0.tar.gz
     cd boost_1_70_0
-    ./bootstrap.sh --prefix=/usr/local
+    ./bootstrap.sh #--prefix=/usr/local
     ./b2 install
     cd ..
     rm -rf boost_1_70_0*
