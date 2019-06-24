@@ -13,6 +13,7 @@ MPI_ROOT=/usr/lib64/openmpi/
 export PATH
 export LD_LIBRARY_PATH
 export MPI_ROOT
+export BOOST_ROOT=/usr/local/
 
 %runscript
 
