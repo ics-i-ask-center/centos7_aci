@@ -70,16 +70,16 @@ export BOOST_ROOT=/usr/local/
     
     ldconfig -n /usr/lib64/openmpi/lib/
     
-    # Install OpenMPI 2.1.6
+    # Install OpenMPI 4.0.1
     cd /tmp/
-    wget https://download.open-mpi.org/release/open-mpi/v2.1/openmpi-2.1.6.tar.gz
-    tar -xf openmpi-2.1.6.tar.gz
-    cd openmpi-2.1.6
+    wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.1.tar.gz
+    tar -xf openmpi-4.0.1.tar.gz
+    cd openmpi-4.0.1
     ./configure --prefix=/usr/lib64/openmpi/bin/
     make -j 2
     make install
     cd ..
-    rm -rf openmpi-2.1.6*
+    rm -rf openmpi-4.0.1*
     
     # Install Boost 1.70.0
     cd /tmp/
