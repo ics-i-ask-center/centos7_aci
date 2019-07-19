@@ -21,4 +21,5 @@ OpenMPI is updated to version 2.1.6
 Boost 1.70.0 in added
 
 2019/7/19  
-Python 2 and 3 are updated to 2.7.16 and 3.7.4
+Python 2 and 3 are updated to version 2.7.16 and version 3.7.4  
+OpenMPI is updated to version 4.0.1
