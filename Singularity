@@ -35,7 +35,7 @@ export BOOST_ROOT=/usr/local/
       gcc-gfortran openssl-devel pcre-devel \
       mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
       fftw-devel cfitsio-devel graphviz-devel \
-      avahi-compat-libdns_sd-devel libldap-dev python-devel python36-devel python36-pip \
+      avahi-compat-libdns_sd-devel libldap-dev \
       libxml2-devel gsl-devel \
       cmake3 \
       hdf5-devel \
