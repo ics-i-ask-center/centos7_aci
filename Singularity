@@ -114,5 +114,9 @@ export BOOST_ROOT=/usr/local/
     make install
     cd ..
     rm -rf ./Python-3.7.4*
-    python get-pip.py
+    python3 get-pip.py
     rm get-pip.py
+    
+    # Install Python packages
+    pip install rpm
+    pip install numpy pandas scipy matplotlib scikit-learn
