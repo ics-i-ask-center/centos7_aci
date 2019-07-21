@@ -101,6 +101,8 @@ export BOOST_ROOT=/usr/local/
     make install
     cd ..
     rm -rf ./Python-2.7.16*
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    python get-pip.py
     
     # Install Python 3.7.4
     cd /tmp/
@@ -112,3 +114,5 @@ export BOOST_ROOT=/usr/local/
     make install
     cd ..
     rm -rf ./Python-3.7.4*
+    python get-pip.py
+    rm get-pip.py
