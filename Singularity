@@ -8,7 +8,7 @@ Include: yum
 
 %environment
 PATH="/opt/sw/python/bin:$PATH:/usr/lib64/openmpi/bin/"
-LD_LIBRARY_PATH="/opt/sw/python/lib:$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib/"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib/"
 MPI_ROOT=/usr/lib64/openmpi/
 export PATH
 export LD_LIBRARY_PATH
@@ -93,12 +93,11 @@ export BOOST_ROOT=/usr/local/
     # Install Python 2.7.16
     mkdir -p /opt/sw/python
     export PATH=/opt/sw/python/bin:$PATH
-    export LD_LIBRARY_PATH=/opt/sw/python/lib:$LD_LIBRARY_PATH
     cd /tmp/
     wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz
     tar -xf Python-2.7.16.tar.xz   
     cd Python-2.7.16
-    ./configure --prefix=/opt/sw/python --enable-shared
+    ./configure --prefix=/opt/sw/python
     make -j 2
     make install
     cd ..
@@ -111,7 +110,7 @@ export BOOST_ROOT=/usr/local/
     wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz
     tar -xf Python-3.7.4.tar.xz
     cd Python-3.7.4
-    ./configure --prefix=/opt/sw/python --enable-shared
+    ./configure --prefix=/opt/sw/python
     make -j 2
     make install
     cd ..
