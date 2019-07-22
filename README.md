@@ -26,3 +26,6 @@ OpenMPI is updated to version 4.0.1
 
 2019/7/21  
 Few Python packages are added
+
+2019/7/22  
+Few corrections are made including Python
