@@ -7,7 +7,7 @@ Include: yum
 %files
 
 %environment
-PATH="$PATH:/usr/lib64/openmpi/bin/"
+PATH="/opt/sw/python/bin:$PATH:/usr/lib64/openmpi/bin/"
 LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib/"
 MPI_ROOT=/usr/lib64/openmpi/
 export PATH
@@ -92,11 +92,13 @@ export BOOST_ROOT=/usr/local/
     rm -rf boost_1_70_0*
     
     # Install Python 2.7.16
+    mkdir -p /opt/sw/python
+    export PATH=/opt/sw/python/bin:$PATH
     cd /tmp/
     wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz
     tar -xf Python-2.7.16.tar.xz   
     cd Python-2.7.16
-    ./configure --prefix=/
+    ./configure --prefix=/opt/sw/python --enable-shared
     make -j 2
     make install
     cd ..
@@ -109,7 +111,7 @@ export BOOST_ROOT=/usr/local/
     wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz
     tar -xf Python-3.7.4.tar.xz
     cd Python-3.7.4
-    ./configure --prefix=/
+    ./configure --prefix=/opt/sw/python --enable-shared
     make -j 2
     make install
     cd ..
@@ -118,5 +120,4 @@ export BOOST_ROOT=/usr/local/
     rm get-pip.py
     
     # Install Python packages
-    pip install rpm
     pip install numpy pandas scipy matplotlib scikit-learn
