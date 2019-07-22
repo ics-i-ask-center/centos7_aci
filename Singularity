@@ -8,7 +8,7 @@ Include: yum
 
 %environment
 PATH="/opt/sw/python/bin:$PATH:/usr/lib64/openmpi/bin/"
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib/"
+LD_LIBRARY_PATH="/opt/sw/python/lib:$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib/"
 MPI_ROOT=/usr/lib64/openmpi/
 export PATH
 export LD_LIBRARY_PATH
@@ -22,7 +22,6 @@ export BOOST_ROOT=/usr/local/
     # add python and install some packages
     yum -y update
     yum -y install epel-release \
-      terminator \
       centos-release-scl
     yum -y install vte-devel \
       vte291-devel \
@@ -35,16 +34,16 @@ export BOOST_ROOT=/usr/local/
       gcc-gfortran openssl-devel pcre-devel \
       mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
       fftw-devel cfitsio-devel graphviz-devel \
-      avahi-compat-libdns_sd-devel libldap-dev \
+      avahi-compat-libdns_sd-devel openldap-devel \
       libxml2-devel gsl-devel \
       cmake3 \
       hdf5-devel \
       patch \
       qt5-qtbase-devel \
       qt5-qtsvg-devel \
-      g++ numpy eigen3-devel zlib-devel libqt4-devel libtiff-devel \
+      gcc-g++ numpy eigen3-devel zlib-devel qt-devel libtiff-devel \
       bzip2 ca-certificates \
-      libglib2.0-0 libxext6 libsm6 libxrender1 \
+      glibc-devel libXext-devel libSM-devel libXrender-devel \
       mercurial subversion \
       mesa-libGLU-devel.i686 \
       mesa-libGL-devel.i686 \
@@ -94,6 +93,7 @@ export BOOST_ROOT=/usr/local/
     # Install Python 2.7.16
     mkdir -p /opt/sw/python
     export PATH=/opt/sw/python/bin:$PATH
+    export LD_LIBRARY_PATH=/opt/sw/python/lib:$LD_LIBRARY_PATH
     cd /tmp/
     wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz
     tar -xf Python-2.7.16.tar.xz   
