@@ -1,13 +1,12 @@
-BootStrap: yum
-OSVersion: 7
-MirrorURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/$basearch/
-Include: yum
+BootStrap: docker
+From: centos:7
+
 %setup
 
 %files
 
 %environment
-PATH="/opt/sw/python/bin:$PATH:/usr/lib64/openmpi/bin/"
+PATH="$PATH:/usr/lib64/openmpi/bin/"
 LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib/"
 MPI_ROOT=/usr/lib64/openmpi/
 export PATH
@@ -51,6 +50,9 @@ export BOOST_ROOT=/usr/local/
       autoconf \
       Lmod
       
+    yum -y install python27-python-devel python27-pip
+    yum -y install rh-python36-python-devel rh-python36-python-pip
+      
     yum -y update
     
     source /opt/rh/devtoolset-8/enable
@@ -90,33 +92,3 @@ export BOOST_ROOT=/usr/local/
     cd ..
     rm -rf boost_1_70_0*
     
-    # Install Python 2.7.16
-    mkdir -p /opt/sw/python
-    export PATH=/opt/sw/python/bin:$PATH
-    cd /tmp/
-    wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tar.xz
-    tar -xf Python-2.7.16.tar.xz   
-    cd Python-2.7.16
-    ./configure --prefix=/opt/sw/python
-    make -j 2
-    make install
-    cd ..
-    rm -rf ./Python-2.7.16*
-    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    python get-pip.py
-    
-    # Install Python 3.7.4
-    cd /tmp/
-    wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tar.xz
-    tar -xf Python-3.7.4.tar.xz
-    cd Python-3.7.4
-    ./configure --prefix=/opt/sw/python
-    make -j 2
-    make install
-    cd ..
-    rm -rf ./Python-3.7.4*
-    python3 get-pip.py
-    rm get-pip.py
-    
-    # Install Python packages
-    pip install numpy pandas scipy matplotlib scikit-learn
