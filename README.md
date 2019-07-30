@@ -32,3 +32,6 @@ OpenMPI is updated to version 4.0.1
 
 2019/7/23  
 Pythons are replaced with packages
+
+2019/7/30  
+devtoolset-7 GCC is added (some software can't be built with GCC 8)
