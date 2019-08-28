@@ -52,7 +52,8 @@ export BOOST_ROOT=/usr/local/
       Lmod
       
     yum -y install python27-python-devel python27-pip
-    yum -y install rh-python36-python-devel rh-python36-python-pip
+    # Command below is installing python 3.6.3 while system version is 3.6.8
+    # yum -y install rh-python36-python-devel rh-python36-python-pip
       
     yum -y update
     
