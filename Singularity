@@ -49,7 +49,8 @@ export BOOST_ROOT=/usr/local/
       mesa-libGL-devel.i686 \
       libcanberra-gtk* \
       autoconf \
-      Lmod
+      Lmod \
+      python3-devel
       
     yum -y install python27-python-devel python27-pip
     # Command below is installing python 3.6.3 while system version is 3.6.8
