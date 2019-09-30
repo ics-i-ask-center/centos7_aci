@@ -35,7 +35,8 @@ Pythons are replaced with packages
 To enable Python 2.7.16,  
 ```
 > source /opt/rh/python27/enable
-```
+```  
+System version of python is 3.6.8
 
 2019/7/30  
 devtoolset-7 GCC is added (some software can't be built with GCC 8)
