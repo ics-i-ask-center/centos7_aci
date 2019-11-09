@@ -101,6 +101,6 @@ export BOOST_ROOT=/usr/local/
     tar -xf cmake-3.15.5.tar.gz
     cd cmake-3.15.5
     ./configure
-    make && make install
+    make -j 2 && make install
     rm -rf cmake-3.15.5*
     
