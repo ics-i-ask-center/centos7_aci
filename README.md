@@ -40,3 +40,6 @@ System version of python is 3.6.8
 
 2019/7/30  
 devtoolset-7 GCC is added (some software can't be built with GCC 8)
+
+2019/11/9  
+CMake 3.15.5 is added
