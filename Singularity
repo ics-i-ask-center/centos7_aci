@@ -95,3 +95,12 @@ export BOOST_ROOT=/usr/local/
     cd ..
     rm -rf boost_1_70_0*
     
+    # Install CMake 3.15.5
+    cd /tmp
+    wget https://github.com/Kitware/CMake/releases/download/v3.15.5/cmake-3.15.5.tar.gz
+    tar -xf cmake-3.15.5.tar.gz
+    cd cmake-3.15.5
+    ./configure
+    make && make install
+    rm -rf cmake-3.15.5*
+    
