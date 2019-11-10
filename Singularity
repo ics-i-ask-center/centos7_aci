@@ -13,7 +13,6 @@ export PATH
 export LD_LIBRARY_PATH
 export MPI_ROOT
 export BOOST_ROOT=/usr/local/
-export PATH=$PATH:/usr/local/bin
 
 %runscript
 
