@@ -5,8 +5,8 @@ This recipe may include unnecessary packages for certain software installation. 
 More packages will be added in the future
 
 2019/2/17
-**Centos 7** with **GCC  8.2.1**  
-To enable GCC 8.2.1,  
+**Centos 7** with **GCC 8**  
+To enable GCC 8,  
 ```
 > source /opt/rh/devtoolset-8/enable
 ```
@@ -43,3 +43,6 @@ devtoolset-7 GCC is added (some software can't be built with GCC 8)
 
 2019/11/9  
 CMake 3.15.5 is added
+
+2019/11/22  
+OpenMPI is downgraded to 1.10.1 to match version on ACI
