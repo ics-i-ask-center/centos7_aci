@@ -87,9 +87,14 @@ export BOOST_ROOT=/usr/local/
 
     # Install OpenMPI 1.10.1
     cd /tmp/
-    wget https://download.open-mpi.org/release/open-mpi/v1.10/openmpi-1.10.1-1.src.rpm
-    yum -y install openmpi-1.10.1-1.src.rpm
-    rm openmpi-1.10.1-1.src.rpm
+    wget https://download.open-mpi.org/release/open-mpi/v1.10/openmpi-1.10.1.tar.gz
+    tar -xf openmpi-1.10.1.tar.gz
+    cd openmpi-1.0.1
+    ./configure --prefix=/usr/lib64/openmpi/bin/
+    make -j 2
+    make install
+    cd ..
+    rm -rf openmpi-*
     
     # Install Boost 1.70.0
     cd /tmp/
