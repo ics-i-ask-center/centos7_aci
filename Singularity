@@ -96,22 +96,22 @@ export BOOST_ROOT=/usr/local/
     cd ..
     rm -rf openmpi-*
     
-    # Install Boost 1.70.0
+    # Install Boost 1.72.0
     cd /tmp/
-    wget https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_70_0.tar.gz
-    tar -xf boost_1_70_0.tar.gz
-    cd boost_1_70_0
+    wget https://dl.bintray.com/boostorg/release/1.70.0/source/boost_1_72_0.tar.gz
+    tar -xf boost_1_72_0.tar.gz
+    cd boost_1_72_0
     ./bootstrap.sh #--prefix=/usr/local
     ./b2 -j 2 install
     cd ..
-    rm -rf boost_1_70_0*
+    rm -rf boost_1_72_0*
     
-    # Install CMake 3.15.5
+    # Install CMake 3.16.4
     cd /tmp
-    wget https://github.com/Kitware/CMake/releases/download/v3.15.5/cmake-3.15.5.tar.gz
-    tar -xf cmake-3.15.5.tar.gz
-    cd cmake-3.15.5
+    wget https://github.com/Kitware/CMake/releases/download/v3.16.4/cmake-3.16.4.tar.gz
+    tar -xf cmake-3.16.4.tar.gz
+    cd cmake-3.16.4
     ./configure
     make -j 2 && make install
-    rm -rf cmake-3.15.5*
+    rm -rf cmake-3.16.4
     
