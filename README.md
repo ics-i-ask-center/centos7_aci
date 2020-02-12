@@ -46,3 +46,6 @@ CMake 3.15.5 is added
 
 2019/11/22  
 OpenMPI is downgraded to 1.10.1 to match version on ACI
+
+2020/2/12  
+Boost is upgraded to 1.72.0 and CMake is upgraded to 3.16.4
