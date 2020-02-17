@@ -1,6 +1,6 @@
 # centos7_aci
 Centos 7 base image for ACI Singualarity recipe  
-This recipe may include unnecessary packages for certain software installation. Size of the container is ~2.5 GB
+This recipe may include unnecessary packages for certain software installation. Size of the container is ~1 GB
 
 More packages will be added in the future
 
