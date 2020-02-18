@@ -60,11 +60,11 @@ export BOOST_ROOT=/usr/local/
     
     source /opt/rh/devtoolset-8/enable
        
-    mkdir -p /storage/home
-    mkdir -p /storage/work
-    mkdir -p /gpfs/scratch
-    mkdir -p /gpfs/group
-    mkdir -p /var/spool/torque
+#    mkdir -p /storage/home
+#    mkdir -p /storage/work
+#    mkdir -p /gpfs/scratch
+#    mkdir -p /gpfs/group
+#    mkdir -p /var/spool/torque
     
     # Make symlinks
     ln -s `which qmake-qt5` /usr/local/bin/qmake
