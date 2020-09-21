@@ -54,3 +54,6 @@ Boost is upgraded to 1.72.0 and CMake is upgraded to 3.16.4
 
 2020/3/2  
 GPU version is added
+
+2020/9/21  
+Minor updates are made (regarding libxkb)
