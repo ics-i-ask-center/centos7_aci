@@ -57,3 +57,6 @@ GPU version is added
 
 2020/9/21  
 Minor updates are made (regarding libxkb)
+
+2020/9/28  
+Recipe for CUDA 9.1 is added (for FSL with CUDA)
