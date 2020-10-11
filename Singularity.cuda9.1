@@ -98,24 +98,35 @@ From: nvidia/cuda:9.1-cudnn7-devel-centos7
     cd ..
     rm -rf openmpi-*
     
-    # Install Boost 1.72.0
+   # Install Boost 1.74.0
     cd /tmp/
-    wget https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.tar.gz
-    tar -xf boost_1_72_0.tar.gz
-    cd boost_1_72_0
+    wget https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz
+    tar -xf boost_1_74_0.tar.gz
+    cd boost_1_74_0
     ./bootstrap.sh #--prefix=/usr/local
     ./b2 -j 2 install
     cd ..
-    rm -rf boost_1_72_0*
+    rm -rf boost_*
     
-    # Install CMake 3.16.4
+    # Install CMake 3.18.4
     cd /tmp
-    wget https://github.com/Kitware/CMake/releases/download/v3.16.4/cmake-3.16.4.tar.gz
-    tar -xf cmake-3.16.4.tar.gz
-    cd cmake-3.16.4
+    wget https://github.com/Kitware/CMake/releases/download/v3.18.4/cmake-3.18.4.tar.gz
+    tar -xf cmake-3.18.4.tar.gz
+    cd cmake-3.18.4
     ./configure
     make -j 2 && make install
-    rm -rf cmake-3.16.4
+    cd ..
+    rm -rf cmake-*
+    
+    # Install R 4.0.3
+    cd /tmp
+    wget https://cran.r-project.org/src/base/R-4/R-4.0.3.tar.gz
+    tar -xf R-4.0.3.tar.gz
+    cd R-4.0.3
+    ./configure
+    make -j 2 && make install
+    cd ..
+    rm -rf R-*
     
     # Install VirtualGL 2.6.3
     cd /tmp
