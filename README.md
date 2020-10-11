@@ -60,3 +60,7 @@ Minor updates are made (regarding libxkb)
 
 2020/9/28  
 Recipe for CUDA 9.1 is added (for FSL with CUDA)
+
+2020/10/11  
+Boost is upgraded to 1.74.0 and CMake is upgraded to 3.18.4  
+R 4.0.3 is added
