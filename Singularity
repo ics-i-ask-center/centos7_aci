@@ -57,6 +57,7 @@ From: centos:7
     # yum -y install rh-python36-python-devel rh-python36-python-pip
     
     yum -y install libxkbcommon-devel libxkbcommon-x11-devel
+    yum -y install readline-devel
     
     yum -y update
     
