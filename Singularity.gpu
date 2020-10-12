@@ -57,7 +57,7 @@ From: nvidia/cuda:10.2-cudnn7-devel-centos7
     # yum -y install rh-python36-python-devel rh-python36-python-pip
     
     yum -y install libxkbcommon-devel libxkbcommon-x11-devel
-    yum -y install readline-devel
+    yum -y install readline-devel bzip2-devel
     
     yum -y update
     
@@ -118,6 +118,26 @@ From: nvidia/cuda:10.2-cudnn7-devel-centos7
     make -j 2 && make install
     cd ..
     rm -rf cmake-*
+    
+    # Install libcurl 7.72.0 (for R 4.0.3)
+    cd /tmp
+    wget https://curl.haxx.se/download/curl-7.72.0.tar.gz
+    tar -xf curl-7.72.0.tar.gz
+    cd curl-7.72.0
+    ./configure
+    make -j 2 && make install
+    cd ..
+    rm -rf curl-*
+    
+    # Install xz 5.2.5 (for R 4.0.3)
+    cd /tmp
+    wget https://tukaani.org/xz/xz-5.2.5.tar.gz
+    tar -xf xz-5.2.5.tar.gz
+    cd xz-5.2.5
+    ./configure
+    make -j 2 && make install
+    cd ..
+    rm -rf xz-*
     
     # Install R 4.0.3
     cd /tmp
