@@ -65,3 +65,6 @@ Recipe for CUDA 9.1 is added (for FSL with CUDA)
 Boost is upgraded to 1.74.0 and CMake is upgraded to 3.18.4  
 R 4.0.3 is added (Curl 7.72.0 and XZ 5.2.5 are added for R)  
 VirtualGL is downgraded to 2.5.2 to match system version
+
+2020/10/18  
+UDUNITS 2.2.26 is added
