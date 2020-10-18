@@ -149,4 +149,12 @@ From: centos:7
     cd ..
     rm -rf R-*
     
-    
+    # Install UDUNITS 2.2.26
+    cd /tmp
+    wget https://www.unidata.ucar.edu/downloads/udunits/udunits-2.2.26.tar.gz
+    tar -xf udunits-2.2.26.tar.gz
+    cd udunits-2.2.26
+    ./configure
+    make -j 2 && make install
+    cd ..
+    rm -rf udunits*
