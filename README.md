@@ -70,4 +70,4 @@ VirtualGL is downgraded to 2.5.2 to match system version
 UDUNITS 2.2.26 is added
 
 2020/10/20  
-LAPACK-devel and BLAS-devel are added
+Tix-devel, Tx-devel, TkInter-devel, LAPACK-devel, and BLAS-devel are added
