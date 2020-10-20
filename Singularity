@@ -54,6 +54,8 @@ From: centos:7
       lapack-devel \
       blas-devel
       
+    yum -y install tix-devel tk-devel tkinter
+      
     yum -y install python27-python-devel python27-pip
     # Command below is installing python 3.6.3 while system version is 3.6.8
     # yum -y install rh-python36-python-devel rh-python36-python-pip
