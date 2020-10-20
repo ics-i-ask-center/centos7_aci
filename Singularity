@@ -50,7 +50,9 @@ From: centos:7
       libcanberra-gtk* \
       autoconf \
       Lmod \
-      python3-devel
+      python3-devel \
+      lapack-devel \
+      blas-devel
       
     yum -y install python27-python-devel python27-pip
     # Command below is installing python 3.6.3 while system version is 3.6.8
